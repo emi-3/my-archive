@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>link none link off</title>
+    <!-- CSS -->
+
+
+    <link href="./link_none.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./common.js"></script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1>jQueryでリンクオフ</h1>
+        <p>menu01,menu05,submenu01のリンク先がまだない場合、
+            <br>リンク切れのエラーページを表示しないようにリンクオフにする</p>
+    </header>
+    <main>
+        <div class="sample_container">
+            <h2>sample site</h2>
+            <div class="container">
+                <!-- mainnavi -->
+                <nav id="mainnavi">
+
+                    <ul class="mnav">
+                        <li class="active"><a href="./">home</a>
+                        </li>
+                        <li><a href="./menu01/">menu01</a>
+                        </li>
+                        <li><a href="./menu02">menu02</a>
+                        </li>
+                        <li class="dropmenu"><a href="./menu03/">menu03</a>
+                            <ul class="submenu">
+                                <li><a href="./menu03/submenu01/">submenu01</a>
+                                </li>
+                                <li><a href="./menu03/submenu02/">submenu02</a>
+                                </li>
+                                <li><a href="./menu03/submenu03/">submenu03</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./menu04/">menu04</a>
+                        </li>
+                        <li><a href="./menu05/">menu05</a>
+                        </li>
+                        <li><a href="./menu06/">menu06</a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
