@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+body {
+font-family: 'Noto Sans Japanese', serif;
+font-weight: 300;
+line-height:1.3em;
+}
+
+h1{
+  font-size: 1rem;
+  text-align: center;
+}
+main{
+  width: 1040px;
+  margin: 0 auto;
+}
+
+footer{
+   width: 1040px;
+  margin: 0 auto;
+  
+}
+.pagetop{
+  float: right;
+}
+
+/* -------------------------------------
+ * timeline
+ * ------------------------------------- */
+
+#timeline {
+  list-style: none;
+  margin: 0 auto 0 6em;
+  padding-left: 20px;
+  border-left: 6px solid #a7be18;
+  box-sizing: border-box;
+}
+#timeline li {
+  width: 100%;
+  margin: 0 0;
+  padding: 5px 0;
+  position: relative;
+}
+#timeline span.time {
+  width: 5em;
+  display: inline-block;
+  margin-left: -8em;
+  padding: 5px 0;
+  vertical-align: top;
+  position: relative;
+  text-align: right;
+  color: #575757;
+}
+#timeline span.time:after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  top: 5px;
+  background: #a7be18;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+#timeline .sch_tx {
+  display: inline-block;
+  width: 100%;
+  margin-left:30px;
+  padding: 5px 10px 5px 10px;
+  vertical-align: middle;
+  background: #efefef;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+#timeline .sch_tx p.tx_s{
+  font-size: 13px;
+  color: #555;
+}
