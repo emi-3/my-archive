@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>agree check</title>
+    <!-- CSS -->
+    <link href="./agree_check.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./common.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1>非表示ボタンをアクティブにする</h1>
+        <p>「同意する」にチェックが入ったらボタン　(aタグ使用)を表示する</p>
+    </header>
+    <main>
+        <div id="sample01" class="sample_container">
+            <h2>sample1</h2>
+            <h3>.btnに.a_onを付けて表示を制御</h3>
+            <p>jQueryでaddClass、removeClassでクラス名をつけたりつけなかったりしています。</p>
+            <div class="container">
+              <p>
+                上記の内容に同意していただけた場合、同意するにチェックをし、送信してください。
+              </p>
+              <p class="agreement_tx"><input type="checkbox" class="agreechk">同意する</p>
+              <div class="btn"><a href="../">送信</a></div>
+            </div>
+        </div>
+        
+        <div id="sample02" class="sample_container">
+            <h2>sample2</h2>
+            <h3>.btnのaタグを削除してチェックが入るとaタグが復活</h3>
+            <p>detach()という方法でイベントを保持したままaタグ内削除して、送信部分を表示させないようにしています。</p>
+            <div class="container">
+              <p>
+                上記の内容に同意していただけた場合、同意するにチェックをし、送信してください。
+              </p>
+              <p class="agreement_tx"><input type="checkbox" class="agreechk2">同意する</p>
+              <div class="btn2"><a href="../" class="detach_a"><span>送信</span></a></div>
+            </div>
+        </div>
+        
+        <div id="sample03" class="sample_container">
+            <h2>sample3</h2>
+            <h3>ボタンを押せない状態からチェックが入ると押せるように</h3>
+            <p>チェックを入れないとボタンを押せないということがわかりやすいようにボタンをoffの状態にしておいて、<br>チェックを入れたら押せるということがわかりやすいようにしています。</p>
+            <div class="container">
+              <p>
+                上記の内容に同意していただけた場合、同意するにチェックをし、送信してください。
+              </p>
+              <p class="agreement_tx"><input type="checkbox" class="agreechk3">同意する</p>
+              <div class="btn3"><a href="../" class="a_disabled" ><span>送信</span></a></div>
+            </div>
+        </div>        
+    </main>
+    
+</body>
+
+</html>

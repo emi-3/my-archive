@@ -1,0 +1,105 @@
+/*------------------------------------
+agree_check_a
+------------------------------------*/
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+ body {
+   font-size: 16px;
+    font-family: 'Noto Sans Japanese', serif;
+    font-weight: 300;
+    line-height: 1.3em;
+}
+h1 {
+    font-size: 20px;
+    text-align: center;
+}
+p {
+  font-size: 16px;
+    text-align: center;
+}
+main {
+    width: 1040px;
+    margin: 0 auto;
+}
+footer {
+    width: 1040px;
+    margin: 0 auto;
+}
+.pagetop {
+    float: right;
+}
+.sample_container {
+  margin-bottom: 20px;
+  padding: 10px;
+  min-height: 200px;
+  background: #f0f0f0;
+}
+.sample_container h2{
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+.sample_container h3{
+  text-align: center;
+  font-size: 16px;
+}
+.sample_container .container {
+  background: #fff;
+  min-height:150px;
+  text-align: center;
+  color: #444;
+    
+}
+.sample_container p {
+  padding:1em 0 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.3;
+}
+/*------------------------------------------------------------agree_chack_a*/
+/* sample1 */
+.btn{
+  text-align: center;
+}
+.btn a{
+  display: none;
+}
+.btn.a_on{
+  text-align: center;
+  width: 4em;
+  height:1.8em;
+  line-height: 1.8em;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;  
+}
+.btn.a_on a{
+  display: block;
+  color: #fff;
+  background: #1dcee5;
+  border-radius: 4px;
+}
+/* sample3 */
+.btn3 a.a_disabled{
+  pointer-events: none;
+  background: #ddd;
+  text-decoration: none;
+  margin: 0 auto;  
+  width: 4em;
+  height:1.8em;
+  line-height: 1.8em;  
+  border-radius: 4px;  
+}
+.btn3 a{
+  pointer-events: all;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;  
+  width: 4em;
+  height:1.8em;
+  line-height: 1.8em;    
+  background: #1dcee5;
+  color: #fff;
+  border-radius: 4px;  
+}
