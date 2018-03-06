@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>circle position</title>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  //真円
+  $('#navi').each(function(i){
+    var cirLi = $(this).find('li');
+    var liNum = $(this).find('li').size();
+    var liNumSpace = parseInt(liNum-1);
+    var cirDeg = parseInt(180/liNumSpace);
+
+    var a = 135; //left: 0;top: 0;なので右起点での中心地 
+    var b = 135; //left: 0;top: 0;なので上起点での中心地
+    var r = 150; //半径
+    var c = 180; //反時計回りの時は0でスタート
+     
+    for (var i=0; i<liNum; i++) {
+          cirLi.eq(i).css({ //$('#navi)の中にあるliのcssを順番に設定
+            left: a+(r*Math.cos(c/180*Math.PI)) + 'px',　//x座標
+            top: b+(r*Math.sin(c/180*Math.PI)) + 'px'　//y座標
+          });  
+           c = c+cirDeg;　//1つの点が決まったら(left,top)次の角度の場所へ移動するため　//反時計回りの時は c = c-cirDeg
+    }
+
+  });
+});
+
+
+  </script>
+  <style>
+    <!--
+    .circle_area {
+      position: relative;
+      width: 300px;
+      min-height: 300px;
+      background: #DDD;
+      border-radius: 100%;
+      margin: 20px 20px 100px;
+    }
+    .circle_area li{
+      display:block;
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      background: #EEE;
+      line-height: 30px;
+      text-align: center;
+      position: absolute;
+      float: left;
+    }
+    -->
+  </style>
+</head>
+<body>
+  <h1>円周上にliを配置</h1>
+  <p>円周上にナビの配置をしなくてはいけない案件の時に下準備として一生懸命書いたもの。その後必要なくなりました…。</p>
+    
+  <div class="circle_area">
+    <ul id="navi" class="clearfix">
+      <li><a href="">A</a></li>
+      <li><a href="">B</a></li>
+      <li><a href="">C</a></li>
+      <li><a href="">D</a></li>
+      <li><a href="">E</a></li>
+      <li><a href="">F</a></li>
+      <li><a href="">G</a></li>
+    </ul>
+  </div>
+
+
+</body>
+</html>
