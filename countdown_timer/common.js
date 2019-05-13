@@ -17,3 +17,10 @@ $(function () {
 });
 
 
+$(function () {
+document.getElementById("CSound").play();
+  
+  //document.getElementById("CSound").pause();
+
+});
+

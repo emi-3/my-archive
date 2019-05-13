@@ -18,8 +18,8 @@ html {
   position: absolute;
   top: 0;
   left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .ttl {
@@ -36,6 +36,6 @@ html {
   position: absolute;
   top: 0;
   left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
