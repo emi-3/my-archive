@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/* 汎用処理
+----------------------------------------- */
+#container{
+	width:500px;
+  height: 200px;
+	margin:0 auto;
+	position:relative;
+	color:#FFF;
+}
+	.box01{
+		width:150px;
+		height:20px;
+		position:absolute;
+		top:1em;
+		left:1em;
+		z-index:999;
+		background:rgba(0,0,0,1);
+	}
+	.box02{
+		width:50px;
+		min-height:100px;
+		position:absolute;
+		top:1em;
+		left:1em;
+		z-index:999;
+		background:rgba(0,0,0,1);
+	}
+	.box03{
+		min-height:100px;
+		position:absolute;
+		top:1em;
+		left:2em;
+		z-index:999;
+		background:rgba(0,0,255,1);
+	}
+	.box04{
+		min-height:100px;
+		position:absolute;
+		top:1em;
+		left:3em;
+		z-index:999 !important;
+		background:rgba(255,0,0,1);
+	}
+	.box05{
+		position:absolute;
+		top:1em;
+		left:2em;
+		z-index:999;
+		background:rgba(0,255,0,1);
+	}
+
+
+
+#jikken{
+  width: 800px;
+  margin: 0 auto;
+}
+  #jikken table{
+    background: #DDD;
+    border-collapse: collapse;
+  }
+  #jikken table tr{
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+    height: auto;
+  }
+  #jikken table th{
+    vertical-align: middle;
+    height: auto;
+  }
+  #jikken table th div{
+    border-right: 1px solid #555;
+    box-shadow: -1px 0 0 rgba(0,0,0,0.1) inset;
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+  #jikken table td{
+  padding: 10px;
+  }
