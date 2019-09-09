@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>z-index vs !important</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="style.js"></script>
+
+</head>
+
+<body>
+  <main>
+
+    <h1>z-index vs !important</h1>
+    <h2>検証</h2>
+    <div class="flex_container">
+      <div id="box01" class="box" style="z-index: 9999 !important;">
+        <p>ボックス01<br>z-index: 10 !important;<br>style属性で<br>z-index: 9999 !important;</p>
+      </div>
+      <div id="box02" class="box">
+        <p>ボックス02<br>z-index: 999;</p>
+      </div>
+      <div id="box03" class="box">
+        <p>ボックス03<br>z-index: 9999;</p>
+      </div>
+      <div id="box04" class="box">
+        <p>ボックス04<br>css<br>z-index: 9999 !important;</p>
+      </div>
+      <div id="box05" class="box">
+        <p>ボックス05<br>jQuery<br>z-index: 9999 !important;</p>
+      </div>
+      <div id="box06" class="box">
+        <p>ボックス06<br>jQuery<br>z-index: 9999 </p>
+      </div>
+      <div id="box07" class="box">
+        <p>ボックス07<br>jQuery<br>z-index: 888 !important;</p>
+      </div>
+      <div id="box08" class="box">
+        <p>ボックス08<br>css<br>z-index: 9999 !important;</p>
+      </div>      
+    </div>
+    <h2>結果</h2>    
+    <dl>
+      <dt>.box01 cssでz-index: 10 !important;</dt>
+      <dd>いきなり!important;使ってみて次のboxでさらに上に表示されるのか。</dd>
+      <dt>.box02　cssでz-index: 999;</dt>
+      <dd>z-indexあえなく上書きされる。</dd>
+      <dt>.box03　cssでz-index: 9999;</dt>
+      <dd>z-indexもちろん上書きされる。</dd>
+      <dt>.box04　cssでz-index: 9999 !important;</dt>
+      <dd>z-indexもちろん上書きされる。</dd>
+      <dt>.box05　jQueryでz-index: 9999 !important;</dt>
+      <dd>cssで9999を指定しているのにjQueryのz-indexは上書きされる。</dd>
+      <dt>.box06　jQueryでz-index: 9999</dt>
+      <dd>同じjQuery使ってるのにz-index上書きされる。</dd>
+      <dt>.box07　jQueryでz-index: 888 !important;</dt>
+      <dd>.box06で上書きされちゃったからscript書いた順に反映されてるのかと思ったらこれは上書きされずに指定した通りにjQueryでz-index: 9999 !important;より下に表示された</dd>
+      <dt>.box08　cssでz-index: 9999 !important;</dt>
+      <dd>jQueryで指定した方がcssより強いと思ってたからびっくり。</dd>
+    </dl>
+    <h2>結論</h2>
+    <p class="notes">
+      cssの!important;よりjQueryの!important;が強いのは予想通り。<br>
+      .box06のz-indexはスクリプトの書いた順番が絡んでるのか？<br>
+      検証中も訳が分からなくなったので、むやみに!importantを使うとハマるということがわかった。
+      <br>過去に検証した時もそういう結論に至ったような。。。
+    </p>
+  </main>
+
+</body>
+
+</html>
