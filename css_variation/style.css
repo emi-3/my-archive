@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+#section01 {
+  padding: 20px;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+}
+
+.in_box {
+  position: relative;
+  padding: 20px;
+  background: #fffcba;
+  overflow: hidden;
+}
+
+/* ol_style01 */
+.ol_style01 {
+  list-style-type: none;
+}
+
+.ol_style01 li {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.ol_style01 li span {
+  position: absolute;
+  bottom: 0;
+  left: -0.15em;
+  font-size: 100px;
+  line-height: 1;
+  font-weight: 900;
+  z-index: 0;
+  color: #f5ec7b;
+  transform: skew(-12deg);
+}
+
+.ol_style01 li p {
+  position: relative;
+  z-index: 999;
+}
+
+/* ol_style01_2 */
+.ol_style01_2 {
+  list-style-type: none;
+}
+
+.ol_style01_2 li {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.ol_style01_2 li .in_box {
+  position: relative;
+  z-index: 10;
+}
+
+.ol_style01_2 li {
+  counter-increment: num_count;
+}
+
+.ol_style01_2 li .in_box::before {
+  content: counter(num_count);
+  position: absolute;
+  bottom: 0;
+  left: -0.15em;
+  font-size: 100px;
+  line-height: 1;
+  font-weight: 900;
+  z-index: -1;
+  color: #f5ec7b;
+  transform: skew(-12deg);
+}
+
+/* ol_style01_3 */
+.ol_style01_3 {
+  list-style-type: none;
+}
+
+.ol_style01_3 li {
+  margin-bottom: 10px;
+  padding: 20px;
+  position: relative;
+  background: #fffcba;
+  text-align: left;
+  overflow: hidden;
+}
+
+.ol_style01_3 li {
+  counter-increment: num_count;
+  position: relative;
+  z-index: 10;
+}
+
+.ol_style01_3 li::before {
+  content: counter(num_count);
+  position: absolute;
+  bottom: 0;
+  left: -0.15em;
+  font-size: 100px;
+  line-height: 1;
+  font-weight: 900;
+  z-index: -1;
+  color: #f5ec7b;
+  transform: skew(-12deg);
+}
+
+
+
+
+
+
+.image {
+  background: url("https://www.fillmurray.com/640/360") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 60px;
+  padding-top: 30px;
+  background-position: bottom;
+}
+.image:before {
+  position: absolute;
+  width: 220px;
+  left: 0;
+  bottom: 0;
+  border-bottom: 20px solid white;
+  border-right: 20px solid transparent;
+  display: block;
+  content:" ";
+}
+.image:after {
+  position: absolute;
+  left: 240px;
+  bottom: 0;
+  right: 0;
+  border-bottom: 20px solid white;
+  border-left: 20px solid transparent;
+  display: block;
+  content:" ";
+}
+
+
+
+.hukidashi{
+  margin-bottom: 100px;
+  width: 300px;
+  min-height: 250px;
+    background: url("https://www.fillmurray.com/640/360") no-repeat center center ;
+  background-size: cover;
+  position: relative;
+  z-index: 80;
+}
+.hukidashi::after{
+  content: "";
+  width: 300px;
+  min-height: 250px;
+  height: auto;
+  display: block;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.in_hukidasihi{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  min-height: 250px;
+
+}
+.in_hukidasihi:before {
+  position: absolute;
+  width: 20px;
+  left: 0;
+  bottom: 0;
+  border-bottom: 20px solid white;
+  border-right: 20px solid transparent;
+  display: block;
+  content:" ";
+  z-index: 888;
+}
+.in_hukidasihi:after {
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  right: 0;
+  border-bottom: 20px solid white;
+  border-left: 20px solid transparent;
+  display: block;
+  content:" ";
+  z-index: 888; 
+
+}

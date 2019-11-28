@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <title>CSS variation</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,900&display=swap&subset=japanese" rel="stylesheet">
+  <link rel="stylesheet" href="ress.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+ <h1>CSS variation</h1>
+  <p>1つのデザインでどこまでHTMLタグをそぎ落とせるか実験。</p>
+  <section id="section01">
+    <div class="container">
+
+      <h2>olで試す</h2>
+      <p>ちょっとボックスからはみ出した数字のついたリストのデザイン</p>
+      <h3>思いついたままかいてみる</h3>
+      <ol class="ol_style01">
+        <li>
+          <div class="in_box"><span>1</span>
+            <p>テキスト文字テキストテキストテキストテキストテキストテキスト</p>
+          </div>
+        </li>
+        <li>
+          <div class="in_box"><span>2</span>
+            <p>テキスト文字テキストテキストテキストテキストテキストテキストテキスト</p>
+          </div>
+        </li>
+        <li>
+          <div class="in_box"><span>3</span>
+            <p>テキスト文字テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </div>
+        </li>
+      </ol>
+      <h3>ちょっと減らしてもいけるかも</h3>
+      <ol class="ol_style01_2">
+        <li>
+          <div class="in_box">テキスト文字テキストテキストテキストテキストテキストテキスト</div>
+        </li>
+        <li>
+          <div class="in_box">テキスト文字テキストテキストテキストテキストテキストテキストテキスト</div>
+        </li>
+        <li>
+          <div class="in_box">テキスト文字テキストテキストテキストテキストテキストテキストテキストテキスト</div>
+        </li>
+      </ol>
+      <h3>あれ？もうちょっといけそう</h3>
+      <ol class="ol_style01_3">
+        <li>テキスト文字テキストテキストテキストテキストテキストテキスト</li>
+        <li>テキスト文字テキストテキストテキストテキストテキストテキストテキスト</li>
+        <li>テキスト文字テキストテキストテキストテキストテキストテキストテキストテキスト</li>
+      </ol>
+      
+      <h3>まとめ</h3>
+      <p>思い付きのままHTMLを書いていくことが多いけど、思いのほかHTMLタグをそぎ落として同じデザインを実現することができた。</p>
+      <p>3つめのはcounter-incrementで数字をカウント。</p>
+      <p>HTMLとCSSは深いなあ。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="hukidashi">
+      <div class="in">
+        <div class="in_hukidasihi">テキスト。テキストテキストテキスト</div>
+      </div>
+    </div>
+  </section>
+  
+  
+   <div class="image">
+    <h1>"I am a proud non-reader of books."</h1>
+    <a class="button" href="javascript:void(0);">Read More</a>
+  </div>
+</body>
+</html>
